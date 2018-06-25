@@ -13,7 +13,7 @@ class StockMoveConteo(models.Model):
     	current_user_id = self.env.uid
     	current_user = self.env['res.users'].search([('id', '=', current_user_id)], limit=1)
     	lista_com = []
-    	for co in current_user.company_ids:
+    	for co in current_user.company_id:
     		lista_com.append(co.id)
     	cr = self.env.cr
     	lista = []
